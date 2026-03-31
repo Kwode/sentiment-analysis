@@ -1,0 +1,5 @@
+{
+  "name": "Sentiment Analyzer",
+  "description": "A web application for sentiment analysis using Transformers and VADER models.",
+  "requestFramePermissions": []
+}

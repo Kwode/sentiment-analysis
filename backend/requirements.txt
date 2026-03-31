@@ -1,0 +1,7 @@
+nltk
+fastapi
+uvicorn
+transformers
+ipykernel
+torch
+vaderSentiment
