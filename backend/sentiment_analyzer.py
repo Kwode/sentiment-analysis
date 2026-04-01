@@ -8,7 +8,7 @@ def analyzer(text: str):
     return sent.polarity_scores(text=text)
 
 
-sent_transform = pipeline('sentiment-analysis', model='finiteautomata/bertweet-base-sentiment-analysis')
+sent_transform = pipeline('sentiment-analysis')
 
 def analyzer_transoform(text: str):
     return sent_transform(text)
