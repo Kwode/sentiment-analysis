@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 from pydantic import BaseModel
-from sentiment_analyzer import analyzer, analyzer_transoform
+from backend.sentiment_analyzer import analyzer, analyzer_transoform
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
 import os
@@ -10,12 +10,14 @@ app = FastAPI()
 
 origins = [
     'http://localhost:3000',
-    'http://localhost:5173'
+    'http://localhost:5173',
+    'http://172.20.10.8:3000',
+    'http://172.20.10.8:5173'
 ]
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins = origins,
+    allow_origins = ['*'],
     allow_methods = ['*'],
     allow_headers = ['*'],
     allow_credentials = True
